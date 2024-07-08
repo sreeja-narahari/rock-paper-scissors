@@ -1,0 +1,22 @@
+import random
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper and 2 for Scissors "))
+game_choices = [rock, paper, scissors]
+user_result = game_choices[user_choice]
+print(user_result)
+print("Computer chose: ")
+comp_choice = random.randint(0,2)
+comp_result = game_choices[comp_choice]
+print(comp_result)
+if comp_result == 2 and user_result == 0:
+    print("You win")
+elif comp_result == 0 and user_result == 2:
+    print("You win")
+elif comp_result > user_result:
+    print("You lose")
+elif user_result > comp_result:
+    print("You win")
+elif comp_result == user_result:
+    print("It's a draw")
+else:
+    print("You typed an invalid number, you lose")
+    
